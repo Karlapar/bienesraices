@@ -6,7 +6,7 @@
 
 *, *:before, *:after {
   box-sizing: inherit;
-}
+} 
 
 body {
   font-family: 'Lato', sans-serif;
@@ -23,23 +23,23 @@ img {
 .contenedor {
   max-width: 120rem;
   /** = 1200px; **/
-  margin: 0auto;
+  margin: 0 auto;
 }
 
 h1 {
-  font: size 3.8rem;
+  font-size: 3.8rem;
 }
 
 h2 {
-  font: size 3.4rem;
+  font-size: 3.4rem;
 }
 
 h3 {
-  font: size 3rem;
+  font-size: 3rem;
 }
 
 h4 {
-  font: size 2.6rem;
+  font-size: 2.6rem;
 }
 
 /**utilidades**/
@@ -58,7 +58,11 @@ h4 {
 }
 
 .d-block {
-  display: block!important;
+  display: block !important;
+}
+
+.contenido-centrado {
+  max-width: 800px;
 }
 
 /**Botones**/
@@ -70,7 +74,7 @@ h4 {
   font-size: 1.8rem;
   padding: 1rem 3rem;
   margin-top: 3rem;
-  display: inline-block!important;
+  display: inline-block !important;
   text-align: center;
 }
 
@@ -196,7 +200,9 @@ h4 {
   list-style: none;
   padding: 0;
   display: flex;
+  flex: 1;
   justify-content: space-evenly;
+  max-width: 500px;
 }
 
 .iconos-caracteristicas li {
@@ -229,7 +235,7 @@ h4 {
   color: #ffffff;
 }
 
-.contenido-contacto {
+.contenido-contacto p {
   font-size: 1.8rem;
 }
 
@@ -240,12 +246,12 @@ h4 {
   justify-content: space-between;
 }
 
-.seccion-inferior.blog {
+.seccion-inferior .blog {
   flex-basis: 60%;
 }
 
 .seccion-inferior .testimoniales {
-  flex-basis: (80% - 1rem);
+  flex-basis: calc(40% - 2rem);
 }
 
 .entrada-blog {
@@ -259,11 +265,11 @@ h4 {
 }
 
 .entrada-blog .imagen {
-  flex-basis: 180%;
+  flex-basis: 40%;
 }
 
 .entrada-blog .texto-entrada {
-  flex-basis: (40%-2rem);
+  flex-basis: calc(60% - 3rem);
 }
 
 .texto-entrada a {
@@ -273,14 +279,14 @@ h4 {
 
 .texto-entrada h4 {
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.4;
 }
 
 .texto-entrada h4::after {
   content: '';
   display: block;
   width: 15rem;
-  height: .3rem;
+  height: .5rem;
   background-color: #71B100;
   margin-top: 1rem;
 }
@@ -293,8 +299,8 @@ h4 {
 
 .testimonial {
   background-color: #71B100;
-  font-size: 1.3rem;
-  padding: 1rem;
+  font-size: 2.4rem;
+  padding: 2rem;
   color: #ffffff;
   border-radius: 2rem;
 }
@@ -306,15 +312,17 @@ h4 {
 .testimonial blockquote::before {
   content: '';
   background-image: url(../img/comilla.svg);
-  width: 4rem;
-  height: 3rem;
+  background-size: cover;
+  width: 5rem;
+  height: 5rem;
   position: absolute;
-  left: -4.5rem;
+  left: -2rem;
 }
 
 .testimonial blockquote {
   position: relative;
-  font: weight 300;
+  padding-left: 5rem;
+  font-weight: 300;
 }
 
 /**footer**/
@@ -337,9 +345,11 @@ h4 {
 
 /**internas**/
 
+/*nosotros**/
+
 .contenido-nosotros {
   display: grid;
-  grid-template-columns: 50%50%;
+  grid-template-columns: 50% 50%;
   grid-column-gap: 2rem;
 }
 
@@ -347,5 +357,11 @@ h4 {
   font-weight: 900;
   font-size: 2rem;
   margin: 0;
-  padding: 3rem 0 3rem;
+  padding: 1rem 0 3rem 0;
+}
+
+.resumen-propiedad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
